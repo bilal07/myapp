@@ -7,10 +7,11 @@ class Items extends Component {
         const items = this.props.items;
         const theItems = items.map((item) => {
             return(
-                <div>
-                    <p>{item.id}</p>
-                    <p>{item.name}</p>
-                    <p>{item.age}</p>
+                <div key={item.id}>
+                    <div>{item.id}</div>
+                    <div>{item.name}</div>
+                    <div>{item.age}</div>
+                    <div>___________</div>
                 </div>
             )
         })
