@@ -2,18 +2,25 @@ import React, { Component } from 'react';
 import Child from './Child';
 
 class App extends Component {
-  state = {  };
+  state = { 
+    name : "bilal"
+   };
   Test() {
     console.log("bilaaaaaal!");
   }
-  Test2 = () => {
-    console.log("coucouuu");
+  handleClick = () => {
+    console.log(this.state.name);
+  }
+
+  handleMouse = () => {
+    console.log("mouse move");
   }
   render() {
     return (
       <div className="App">
         <Child />
-          { this.Test2() }
+          <button onClick={this.handleClick}>Click</button>
+          <button onMouseMove={this.handleMouse}>MouseMove</button>
       </div>
     );
   }
