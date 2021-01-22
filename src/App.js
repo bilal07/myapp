@@ -1,28 +1,28 @@
 import React, { Component } from 'react';
-import Child from './Child';
+import Items from './components/Items'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
-  state = { 
-    name : 'bilal',
-    age : 25
-   };
-
-   change = () => {
-     this.setState({
-       name : 'ahmed',
-       age : 24
-     })
-   }
+  state = {
+    items : [
+        {id:1, name:'ahmed', age:22},
+        {id:2, name:'bilal', age:25},
+    ]
+}
   render() {
     return (
       <div className="App">
-        <button onClick={this.change}>change state</button>
-        <p>{this.state.name}</p>
-        <p>{this.state.age}</p>
+        List des items
+        <Items items = {this.state.items} />
       </div>
     );
   }
 }
 
 export default App;
+
+/*
+- class based compoent
+- function component
+
+*/

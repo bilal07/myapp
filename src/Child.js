@@ -5,10 +5,17 @@ class Child extends Component {
     render() {
         return (
             <div>
-                Child Component
+                {this.props.test}
             </div>
         );
     }
 }
 
+/*const Child  = () {
+    return (
+        <div>
+            Child Component
+        </div>
+    );
+}*/
 export default Child;
