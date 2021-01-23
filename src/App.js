@@ -18,10 +18,14 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        Form Part 1
+        Form Part 2
         <form onSubmit={this.handleSubmit}>
-          <input type="text" onChange={this.handleChange}/>
-          <button type="submit">Submit</button>
+          <select name="" id="" onChange={this.handleChange}>
+            <option value="value1">value 1</option>
+            <option value="value2">value 2</option>
+            <option value="value3">value 3</option>
+          </select>
+          <input type="submit" value="send" />
         </form>
         {this.state.name}
       </div>
