@@ -4,30 +4,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
   state = {
-    name :''
+    items : [
+      {id:1, name:'bilal', age:22, count:2},
+      {id:2, name:'ahmed', age:24, count:1},
+      {id:3, name:'adil', age:23, count:3}
+    ]
   }
-  handleChange = (e) => {
-    this.setState({
-      name : e.target.value
-    })
-  }
-  handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(this.state.name)
-  }
+  
   render() {
     return (
       <div className="App">
-        Form Part 2
-        <form onSubmit={this.handleSubmit}>
-          <select name="" id="" onChange={this.handleChange}>
-            <option value="value1">value 1</option>
-            <option value="value2">value 2</option>
-            <option value="value3">value 3</option>
-          </select>
-          <input type="submit" value="send" />
-        </form>
-        {this.state.name}
+        Condition output
+        <Items items={this.state.items} />
       </div>
     );
   }
