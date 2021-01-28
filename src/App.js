@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
-import Items from './components/Items'
+import { BrowseRouter, BrowserRouter, Route } from 'react-router-dom';
+import Home from './components/Home';
+import About from './components/About';
+
+import Items from './components/Items';
+import Nav from './components/Nav';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
@@ -46,12 +51,13 @@ class App extends Component {
   render() {
     console.log("render");
     return (
+     <BrowserRouter>
       <div className="App">
-        Condition output
-        <Items items={this.state.items} />
-        <button onClick={this.handleClick}>Add</button>
-        <button onClick={this.handleDelete}>Delete</button>
+        <Nav />
+        <Route exact path="/" component={Home} />
+        <Route path="/about" component={About} />
       </div>
+     </BrowserRouter>
     );
   }
 }
