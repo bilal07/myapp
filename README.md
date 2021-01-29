@@ -80,3 +80,8 @@ git commit -m "first commit"
 git branch -M master
 git remote add origin https://github.com/bilal07/react-complete-guide.git
 git push -u origin master
+
+
+
+git reset --hard
+git pull

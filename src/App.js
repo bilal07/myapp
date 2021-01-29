@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { BrowseRouter, BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About';
 import Blog from './components/Blog';
+import Rout from './components/Rout';
 
 import Items from './components/Items';
 import Nav from './components/Nav';
@@ -55,9 +56,12 @@ class App extends Component {
      <BrowserRouter>
       <div className="App">
         <Nav />
-        <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/blog" component={Blog} />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/blog" component={Blog} />
+          <Route path="/:test_params" component={Rout} />
+        </Switch>
       </div>
      </BrowserRouter>
     );
